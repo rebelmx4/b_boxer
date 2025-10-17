@@ -56,10 +56,10 @@ export const performOcr = async (imageDataUrl: string): Promise<OcrResponse | nu
       ocrImage: ocrResult.ocrImage,
     };
 
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('Failed to perform OCR:', error);
-    // In a real app, you'd want to show this error to the user
-    alert(`OCR Request Failed: ${error.message}`);
+    const message = error instanceof Error ? error.message : String(error);
+    alert(`OCR Request Failed: ${message}`);
     return null;
   }
 };

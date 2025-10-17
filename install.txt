@@ -1,0 +1,3 @@
+rd /s /q "E:\100_MyProjects\b_boxer_jules\node_modules"
+set ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/
+npm install

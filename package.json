@@ -5,6 +5,9 @@
   "main": "dist/main/main.js",
   "scripts": {
     "dev": "concurrently \"npm run watch:main\" \"vite\"",
+    "dev:vite": "vite --strictPort",
+    "dev:electron": "wait-on tcp:5173 && set NODE_ENV=development && electron .",
+    "dev:all": "concurrently -k -r -s first \"npm:watch:main\" \"npm:dev:vite\" \"npm:dev:electron\"",
     "build:renderer": "vite build",
     "build:main": "tsc -p tsconfig.main.json",
     "build": "npm run build:renderer && npm run build:main",
