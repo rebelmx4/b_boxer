@@ -1,0 +1,31 @@
+{
+  "name": "electron-react-ts-app",
+  "version": "1.0.0",
+  "description": "An annotation and OCR application.",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "dev": "concurrently \"npm run watch:main\" \"vite\"",
+    "build:renderer": "vite build",
+    "build:main": "tsc -p tsconfig.main.json",
+    "build": "npm run build:renderer && npm run build:main",
+    "start": "npm run build && electron .",
+    "watch:main": "tsc -p tsconfig.main.json --watch",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "electron-store": "^7.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "concurrently": "^8.0.0",
+    "electron": "^24.1.1",
+    "electron-builder": "^23.6.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.2.0",
+    "wait-on": "^7.0.0"
+  }
+}

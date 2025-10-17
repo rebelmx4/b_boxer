@@ -1,0 +1,35 @@
+.annotation-tool-layout {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  padding: 15px;
+  border-right: 1px solid #4a4a4a;
+  overflow-y: auto;
+}
+
+.main-content-area {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+  overflow: hidden; /* Important for panning and zooming */
+}
+
+.canvas-placeholder {
+  width: 80%;
+  height: 80%;
+  border: 2px dashed #555;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #888;
+  font-size: 1.2em;
+}

@@ -1,0 +1,73 @@
+.project-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.project-menu-button {
+  background-color: #007acc;
+  color: white;
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.project-menu-dropdown {
+  display: block;
+  position: absolute;
+  right: 0;
+  background-color: #4a4a4a;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+  padding: 5px 0;
+}
+
+.project-menu-dropdown ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-menu-dropdown li {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.project-menu-dropdown li:hover {
+  background-color: #5a5a5a;
+}
+
+.project-menu-dropdown .separator {
+  border-top: 1px solid #666;
+  padding-top: 10px;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #ccc;
+  cursor: default;
+}
+
+.project-menu-dropdown .separator:hover {
+  background-color: transparent;
+}
+
+.project-menu-dropdown .recent-item {
+  padding-left: 25px;
+  font-style: italic;
+}
+
+.project-menu-dropdown .disabled {
+  padding-left: 25px;
+  font-style: italic;
+  color: #888;
+  cursor: default;
+}
+
+.project-menu-dropdown .disabled:hover {
+  background-color: transparent;
+}

@@ -1,0 +1,27 @@
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none; /* Remove focus outline */
+}
+
+.canvas-placeholder {
+  width: 90%;
+  height: 90%;
+  border: 2px dashed #555;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #888;
+  font-size: 1.2em;
+}
+
+canvas {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
